@@ -10,12 +10,12 @@
             @csrf
 
             <div class="form-group">
-                <label for="company_name">Name:</label>
+                <label for="company_name">Company:</label>
                 <input type="text" name="company_name" id="company_name" class="form-control">
             </div>
 
             <div class="form-group">
-                <label for="company_tin">Tin:</label>
+                <label for="company_tin">Taxpayer ident. num.:</label>
                 <input type="number" name="company_tin" id="company_tin" class="form-control">
             </div>
 
@@ -36,7 +36,7 @@
 
             <div class="form-group mt-3 mb-3 d-flex justify-content-between">
                 <button type="submit" class="btn btn-success">Sign up</button>
-                <a href="/login" class="text-decoration-underline align-self-center">I already have an account</a>
+                <a href="/registercompany" class="text-decoration-underline align-self-center">I already have an account</a>
             </div>
 
 

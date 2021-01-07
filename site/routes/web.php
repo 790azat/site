@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\AuthcompanyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,12 +36,11 @@ Route::get('/register', function () {
 
 Route::post('/register', [AuthController::class , 'store']);
 
-
 Route::get('/registercompany', function () {
     return view('auth.registercompany');
 });
 
-Route::post('/registercompany', [AuthController::class , 'registercompany']);
+Route::post('/registercompany', [AuthcompanyController::class , 'company_store']);
 
 Route::get('/userpanel', function() {
     return view('auth.userpanel');
