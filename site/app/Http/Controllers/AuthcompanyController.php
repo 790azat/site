@@ -24,22 +24,20 @@ class AuthcompanyController extends Controller
         return view('welcome', ['notification' => 'Please confirm your email address by opening link on your email']);
 
     }
+    public function company_login(Request $request) {
 
-    public function login(Request $request) {
+        $company_email = $request->input('company_email');
+        $a1 = $request->input('company_email');
+        $c1 = $password = $request->input('company_password');
 
-        $email = $request->input('email');
-        $a = $request->input('email');
-        $password = $request->input('password');
-        $c = $password = $request->input('password');
+        $b1 = DB::table('auth_companies')->where('company_email', $company_email)->value('company_email');
+        $d1 = DB::table('auth_companies')->where('company_email', $company_email)->value('company_password');
 
-        $b = DB::table('auths')->where('email', $email)->value('email');
-        $d = DB::table('auths')->where('email', $email)->value('password');
-
-        if($a == $b and $c == $d) {
-            return view('auth.userpanel', ['notification' => $a]);
+        if($a1 == $b1 and $c1 == $d1) {
+            return view('auth.userpanel', ['notification' => $company_email]);
         }
         else {
-            return view('auth.login', ['notification' => 'true']);
+            return view('auth.companylogin', ['notification' => 'true']);
         }
 
     }

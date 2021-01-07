@@ -5,7 +5,7 @@
 @section('content')
 
     <div class="col-sm-5 shadow border mx-auto mt-5 py-3 rounded-3 mb-5">
-        <h1 class="text-center">Login User</h1>
+        <h1 class="text-center">Login Company</h1>
 
         @if(@isset($notification))
             <div class="alert alert-danger w-50 mx-auto mt-3" role="alert">
@@ -13,7 +13,7 @@
             </div>
         @endif
 
-        <form action="/login" method="post" class="w-50 mx-auto">
+        <form action="/companylogin" method="post" class="w-50 mx-auto">
             @csrf
 
             <div class="form-group">
@@ -27,8 +27,8 @@
             </div>
 
             <div class="form-group mt-3 mb-3 d-flex justify-content-between">
-                <button type="submit" class="btn btn-success font">Login</button>
-                <a href="/register" class="text-decoration-underline align-self-center">I dont have an account</a>
+                <button type="submit" class="btn btn-success">Login</button>
+                <a href="/login" class="text-decoration-underline align-self-center">I dont have an account</a>
             </div>
 
 
@@ -36,8 +36,8 @@
     </div>
 
     <div class="col-sm-5 mx-auto text-center">
-        <a href="/companylogin" class="btn btn-primary text-white">
-            Login as Company
+        <a href="/login" class="btn btn-primary text-white">
+            Login as User
         </a>
     </div>
 

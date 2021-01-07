@@ -32,7 +32,6 @@ class AuthController extends Controller
 
         $email = $request->input('email');
         $a = $request->input('email');
-        $password = $request->input('password');
         $c = $password = $request->input('password');
 
         $b = DB::table('auths')->where('email', $email)->value('email');

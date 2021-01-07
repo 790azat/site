@@ -46,5 +46,11 @@ Route::get('/userpanel', function() {
     return view('auth.userpanel');
 });
 
+Route::post('/companylogin', [AuthcompanyController::class , 'company_login']);
+
+Route::get('/companylogin', function () {
+    return view('auth.companylogin');
+});
+
 
 
