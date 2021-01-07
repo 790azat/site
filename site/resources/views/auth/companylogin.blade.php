@@ -17,13 +17,13 @@
             @csrf
 
             <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" class="form-control">
+                <label for="company_email">Email:</label>
+                <input type="email" name="company_email" id="company_email" class="form-control">
             </div>
 
             <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password" class="form-control">
+                <label for="company_password">Password:</label>
+                <input type="password" name="company_password" id="company_password" class="form-control">
             </div>
 
             <div class="form-group mt-3 mb-3 d-flex justify-content-between">

@@ -38,7 +38,7 @@ class AuthController extends Controller
         $d = DB::table('auths')->where('email', $email)->value('password');
 
         if($a == $b and $c == $d) {
-            return view('auth.userpanel', ['notification' => $a]);
+            return view('auth.userpanel', ['email_show' => $a]);
         }
         else {
             return view('auth.login', ['notification' => 'true']);

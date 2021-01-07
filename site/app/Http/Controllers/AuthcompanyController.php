@@ -8,7 +8,8 @@ use Illuminate\Support\Facades\DB;
 
 class AuthcompanyController extends Controller
 {
-    public function company_store(Request $request) {
+    public function company_store(Request $request)
+    {
 
         $AuthCompany = new AuthCompany();
 
@@ -24,7 +25,9 @@ class AuthcompanyController extends Controller
         return view('welcome', ['notification' => 'Please confirm your email address by opening link on your email']);
 
     }
-    public function company_login(Request $request) {
+
+    public function company_login(Request $request)
+    {
 
         $company_email = $request->input('company_email');
         $a1 = $request->input('company_email');
@@ -33,12 +36,13 @@ class AuthcompanyController extends Controller
         $b1 = DB::table('auth_companies')->where('company_email', $company_email)->value('company_email');
         $d1 = DB::table('auth_companies')->where('company_email', $company_email)->value('company_password');
 
-        if($a1 == $b1 and $c1 == $d1) {
-            return view('auth.userpanel', ['notification' => $company_email]);
+        if ($a1 == $b1 and $c1 == $d1) {
+            if ($a1 == $b1 and $c1 == $d1) {
+                return view('auth.userpanel', ['notification' => $company_email]);
+            }
         }
         else {
-            return view('auth.companylogin', ['notification' => 'true']);
+            return view('auth.companylogin', ['notification' => true]);
         }
-
     }
 }
